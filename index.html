@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NovaCell - celulares y accesorios con los mejores precios.">
+  <title>NovaCell | Tu celular, tu estilo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="#inicio" aria-label="NovaCell inicio"><span>✦</span> NovaCell</a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Celulares</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="cart-button" id="open-cart" aria-label="Abrir carrito">
+        <span class="cart-icon">🛒</span><span>Carrito</span><b id="cart-count">0</b>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">TECNOLOGÍA QUE TE ACOMPAÑA</p>
+          <h1>Encuentra el celular <em>perfecto</em> para ti.</h1>
+          <p class="hero-text">Modelos increíbles, precios honestos y atención personalizada. Renueva tu mundo con NovaCell.</p>
+          <a class="primary-button" href="#catalogo">Ver catálogo <span>→</span></a>
+          <div class="trust-row"><span>✓ Envíos a todo el país</span><span>✓ Compra segura</span></div>
+        </div>
+        <div class="hero-phone" aria-hidden="true">
+          <div class="phone-glow"></div><div class="phone-device"><div class="phone-camera"></div><div class="phone-screen"><span>10:09</span><strong>Nova</strong></div></div>
+          <span class="floating-tag tag-one">NUEVO</span><span class="floating-tag tag-two">5G</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-section container" id="catalogo">
+      <div class="section-heading"><div><p class="eyebrow">NUESTROS FAVORITOS</p><h2>Elige tu próximo celular</h2></div><p class="section-note">Calidad garantizada en cada equipo.</p></div>
+      <div class="toolbar"><div class="categories" id="categories"><button class="category active" data-category="Todos">Todos</button><button class="category" data-category="Apple">Apple</button><button class="category" data-category="Samsung">Samsung</button><button class="category" data-category="Xiaomi">Xiaomi</button></div><label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Buscar celular..." aria-label="Buscar celular"></label></div>
+      <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <section class="features" id="nosotros"><div class="container feature-grid"><div class="feature"><span>🚚</span><div><h3>Envío rápido</h3><p>Recibe tu pedido de forma segura.</p></div></div><div class="feature"><span>🛡️</span><div><h3>Compra protegida</h3><p>Equipos originales y garantizados.</p></div></div><div class="feature"><span>💬</span><div><h3>Atención humana</h3><p>Estamos aquí para ayudarte.</p></div></div></div></section>
+    <section class="management container" id="ventas"><div class="section-heading"><div><p class="eyebrow">CONTROL DEL NEGOCIO</p><h2>Inventario y ventas</h2></div><p class="section-note">Stock actualizado automáticamente.</p></div><div class="management-grid"><div class="management-card"><h3>Inventario actual</h3><div id="inventory-table"></div></div><div class="management-card"><h3>Ventas confirmadas</h3><div id="sales-table"><p class="empty-management">Todavía no hay ventas registradas.</p></div></div></div></section>
+    <section class="contact container" id="contacto"><div><p class="eyebrow">¿TIENES DUDAS?</p><h2>Hablemos de tecnología.</h2></div><a class="secondary-button" href="https://wa.me/0000000000" target="_blank" rel="noreferrer">Escribir por WhatsApp ↗</a></section>
+  </main>
+
+  <footer><div class="container footer-wrap"><a class="logo" href="#inicio"><span>✦</span> NovaCell</a><p>© 2025 NovaCell. Todos los derechos reservados.</p><p>Tu tecnología, a tu manera.</p></div></footer>
+
+  <div class="cart-overlay" id="cart-overlay" hidden></div>
+  <aside class="cart-panel" id="cart-panel" aria-label="Carrito de compras" aria-hidden="true"><div class="cart-header"><h2>Tu carrito</h2><button id="close-cart" aria-label="Cerrar carrito">×</button></div><div class="cart-items" id="cart-items"><p class="empty-cart">Tu carrito está vacío.</p></div><div class="cart-footer"><label class="client-field">Cliente<input id="client-name" type="text" placeholder="Nombre del cliente" value="Cliente mostrador"></label><div class="cart-summary"><span>Subtotal</span><strong id="cart-subtotal">$0.00</strong><span>IGV (18%)</span><strong id="cart-igv">$0.00</strong><span>Total</span><strong id="cart-total">$0.00</strong></div><button class="primary-button checkout" id="checkout">Confirmar venta</button></div></aside>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
